@@ -4,11 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Permission\Traits\HasRoles;
+use BezhanSalleh\FilamentShield\Traits\HasPanelShield;
 
 class AlatUkur extends Model
 {
-    use HasFactory;
+    use HasFactory, HasRoles, HasPanelShield;
 
+    protected $guard_name = 'web'; 
     protected $fillable = [
         'assy_number',
         'assy_name',

@@ -58,6 +58,9 @@ class AdminPanelProvider extends PanelProvider
             ->favicon(asset('images/logo-siva.png'))
             ->brandName('SIVA')
             ->brandLogo(asset('images/logo-siva.png'))
-            ->brandLogoHeight('3rem');
+            ->brandLogoHeight('3rem')
+            ->plugins([
+                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make()
+            ]);
     }
 }
